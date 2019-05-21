@@ -18,14 +18,14 @@ class ViewController: UIViewController {
         
         view.backgroundColor = .lightGray
 
-        let btnSafariViewController = UIButton(type: .infoDark)
-        btnSafariViewController.setTitle("open in SFSafariViewController", for: .normal)
-        btnSafariViewController.addTarget(self, action: #selector(handleSafariViewController), for: .touchUpInside)
-        view.addSubview(btnSafariViewController)
-        btnSafariViewController.translatesAutoresizingMaskIntoConstraints = false
+        let btnSafari = UIButton(type: .infoDark)
+        btnSafari.setTitle("open in Safari", for: .normal)
+        btnSafari.addTarget(self, action: #selector(handleSafari), for: .touchUpInside)
+        view.addSubview(btnSafari)
+        btnSafari.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            btnSafariViewController.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            btnSafariViewController.topAnchor.constraint(equalTo: view.topAnchor, constant: 100)
+            btnSafari.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            btnSafari.topAnchor.constraint(equalTo: view.topAnchor, constant: 100)
         ])
         
         let urlLabel = UILabel()
@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         view.addSubview(urlLabel)
         urlLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            urlLabel.topAnchor.constraint(equalTo: btnSafariViewController.bottomAnchor, constant: 40),
+            urlLabel.topAnchor.constraint(equalTo: btnSafari.bottomAnchor, constant: 40),
             urlLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             urlLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
         ])
@@ -55,12 +55,15 @@ class ViewController: UIViewController {
     }
     
     @objc
-    func handleSafariViewController() {
+    func handleSafari() {
         guard let url = URL(string: urlStr) else {
             return
         }
-        let safariVC = SFSafariViewController(url: url)
-        present(safariVC, animated: true, completion: nil)
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
     }
 
 }
