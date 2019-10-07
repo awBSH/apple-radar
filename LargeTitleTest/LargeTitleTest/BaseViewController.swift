@@ -46,7 +46,7 @@ class FirstViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.largeTitleDisplayMode = .never
+        navigationItem.largeTitleDisplayMode = .always
     }
     
     override func getNextViewController() -> UIViewController? {
@@ -84,6 +84,7 @@ class ThirdViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.prefersLargeTitles = false
+        navigationItem.largeTitleDisplayMode = .never
     }
     
     override func getNextViewController() -> UIViewController? {
@@ -102,6 +103,7 @@ class FourthViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .always
     }
     
 }
