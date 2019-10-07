@@ -7,4 +7,4 @@ The large Title of the ViewController behaves the same in iOS12 and iOS13
 
 #### Actual behaviour in WkWebView
 The large Title of the ViewController behaves different in iOS12 and iOS13
-![download Video](https://github.com/awBSH/apple-radar/raw/master/LargeTitleTest/LargeTitleTest.mov)
+[download Video](https://github.com/awBSH/apple-radar/raw/master/LargeTitleTest/LargeTitleTest.mov)
