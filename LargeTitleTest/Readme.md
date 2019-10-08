@@ -1,6 +1,5 @@
 # Large Title of ViewController behaves different in iOS12 and iOS13
-#### Radar
-[rdar://48813943](http://openradar.appspot.com/radar?id=4969593701400576)
+#### FB7359915
 
 #### Expected behaviour
 The large Title of the ViewController behaves the same in iOS12 and iOS13
