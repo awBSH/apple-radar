@@ -22,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let window = window {
             let vc = FirstViewController()
             nc = UINavigationController(rootViewController: vc)
+            // need to set this as early as possible to the navigation controller
+            nc?.navigationBar.prefersLargeTitles = true
             window.rootViewController = nc
             window.makeKeyAndVisible()
         }

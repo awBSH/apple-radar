@@ -41,12 +41,14 @@ class FirstViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "First"
+        // setting largeTitleDisplayMode in viewDidLoad instead of viewWillAppear
+        navigationItem.largeTitleDisplayMode = .always
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.largeTitleDisplayMode = .always
+//        navigationController?.navigationBar.prefersLargeTitles = true
+//        navigationItem.largeTitleDisplayMode = .always
     }
     
     override func getNextViewController() -> UIViewController? {
@@ -60,12 +62,14 @@ class SecondViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Second"
+        // setting largeTitleDisplayMode in viewDidLoad instead of viewWillAppear
+        navigationItem.largeTitleDisplayMode = .always
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.largeTitleDisplayMode = .always
+//        navigationController?.navigationBar.prefersLargeTitles = true
+//        navigationItem.largeTitleDisplayMode = .always
     }
     
     override func getNextViewController() -> UIViewController? {
@@ -79,12 +83,14 @@ class ThirdViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Third"
+        // setting largeTitleDisplayMode in viewDidLoad instead of viewWillAppear
+        navigationItem.largeTitleDisplayMode = .never
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.prefersLargeTitles = false
-        navigationItem.largeTitleDisplayMode = .never
+//        navigationController?.navigationBar.prefersLargeTitles = false
+//        navigationItem.largeTitleDisplayMode = .never
     }
     
     override func getNextViewController() -> UIViewController? {
@@ -98,12 +104,14 @@ class FourthViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Fourth"
+        // setting largeTitleDisplayMode in viewDidLoad instead of viewWillAppear
+        navigationItem.largeTitleDisplayMode = .always
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.largeTitleDisplayMode = .always
+//        navigationController?.navigationBar.prefersLargeTitles = true
+//        navigationItem.largeTitleDisplayMode = .always
     }
     
 }
